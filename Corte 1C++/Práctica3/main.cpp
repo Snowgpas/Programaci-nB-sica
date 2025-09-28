@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
 
 /* print Fahrenheit-Celsius table
    for fahr = 0, 20, ..., 300; floating-point version */
@@ -21,3 +20,4 @@
 	 }
 	
 }
+
