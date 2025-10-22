@@ -1,27 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main() {
-    int numero;
-    int positivos = 0;
-    int negativos = 0;
+    int numero, intento, intentos = 0;
 
-    printf("Introduce una lista de numeros (termina con 0):\n");
+    srand(time(NULL));
+    numero = rand() % 10 + 1;
 
-    scanf("%d", &numero);
+    printf("Adivina el numero entre 1 y 10:\n");
 
-    while (numero != 0) {
-        if (numero > 0) {
-            positivos++;
-        } else {
-            negativos++;
-        }
+    scanf("%d", &intento);
+    intentos = 1;
 
-        scanf("%d", &numero);
+    while (intento != numero) {
+        printf("No adivinaste. Intenta de nuevo:\n");
+        scanf("%d", &intento);
+        intentos++;
     }
 
-    printf("\nCantidad de numeros positivos: %d\n", positivos);
-    printf("Cantidad de numeros negativos: %d\n", negativos);
+    printf("Correcto. El numero era %d.\n", numero);
+    printf("Lo lograste en %d intento(s).\n", intentos);
 
     return 0;
 }
