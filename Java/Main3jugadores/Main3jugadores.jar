@@ -1,0 +1,19 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        Jugador jugador1 = new Jugador();
+        Jugador jugador2 = new Jugador();
+        Jugador jugador3 = new Jugador();
+
+        jugador1.name = "Juan";
+        jugador2.name = "Carlos";
+        jugador3.name = "Pedro";
+
+        System.out.println("Jugador 1: " + jugador1.name);
+        System.out.println("Jugador 2: " + jugador2.name);
+        System.out.println("Jugador 3: " + jugador3.name);
+
+    }
+
+}
